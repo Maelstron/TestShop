@@ -1,0 +1,15 @@
+Library/
+Temp/
+Logs/
+DevLogDocs/
+obj/
+.vs/
+AssetBundles/
+Exports/
+Assets/Ignore/
+Assets/_Temporary/
+UnityPackageManager/
+*.csproj
+*.sln
+*.spp
+*.unityproj
