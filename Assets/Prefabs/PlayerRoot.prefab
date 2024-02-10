@@ -664,8 +664,8 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8316938148596204873}
   m_Enabled: 1
-  m_SortingLayerID: -105541197
-  m_SortingLayer: 3
+  m_SortingLayerID: -44025399
+  m_SortingLayer: 2
   m_SortingOrder: 0
 --- !u!114 &8316938148596204878
 MonoBehaviour:
@@ -705,7 +705,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &482850487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -730,7 +730,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.67, y: 1.01}
+  m_Size: {x: 0.67, y: 0.75}
   m_EdgeRadius: 0
 --- !u!114 &482850485
 MonoBehaviour:
