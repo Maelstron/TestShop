@@ -680,8 +680,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory:
-    itemList: []
-  defaultOutfit: {fileID: 8316938148700989957}
+    itemList:
+    - {fileID: 11400000, guid: 967500cab8cb1d141be852ff251e8f13, type: 2}
+    money: 200
+  defaultOutfit: {fileID: 11400000, guid: 1a69763acea748f4181c3e2d18fcfbe2, type: 2}
   hairObject: {fileID: 8316938148909050653}
   outfitObject: {fileID: 8316938148700989957}
   baseBodyObject: {fileID: 8316938147552747832}

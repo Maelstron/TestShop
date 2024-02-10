@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItems:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 4c928d5ae4bd6c743931e993e5cd9884, type: 2}
+  - {fileID: 11400000, guid: 532b6308cf0f9574b8d9e6858e4d9996, type: 2}
+  shopkeeper: {fileID: 0}
+  interactionNotice: {fileID: 0}

@@ -11,40 +11,56 @@ public class MenuInputHandler : IInputHandler
 	{
 		switch (key)
 		{
-			case KeyCode.X:
+			case KeyCode.Z:
 			{
-				inventoryController.IsOnPlayerSide = !inventoryController.IsOnPlayerSide;
+				inventoryController.Interact();
+				break;
+			}
+			case KeyCode.C:
+			{
+				GameManager.instance.CloseInventoryDialog();
 				break;
 			}
 			case KeyCode.DownArrow:
 			{
-				if (inventoryController.SelectionIndex > 11)
+				if (inventoryController.IsOnBackpack)
 				{
-					inventoryController.SelectionIndex -= 12;
-				}
-				else
-				{
-					inventoryController.SelectionIndex += 4;
+					if (inventoryController.SelectionIndex > 11)
+					{
+						inventoryController.SelectionIndex -= 12;
+					}
+					else
+					{
+						inventoryController.SelectionIndex += 4;
+					}
 				}
 				break;
 			}
 			case KeyCode.UpArrow:
 			{
-				if (inventoryController.SelectionIndex < 4)
+				if (inventoryController.IsOnBackpack)
 				{
-					inventoryController.SelectionIndex += 12;
-				}
-				else
-				{
-					inventoryController.SelectionIndex -= 4;
+					if (inventoryController.SelectionIndex < 4)
+					{
+						inventoryController.SelectionIndex += 12;
+					}
+					else
+					{
+						inventoryController.SelectionIndex -= 4;
+					}
 				}
 				break;
 			}
 			case KeyCode.RightArrow:
 			{
-				if (inventoryController.SelectionIndex % 4 == 3)
+				if (!inventoryController.IsOnBackpack)
+				{
+					inventoryController.IsOnBackpack = true;
+				}
+				else if (inventoryController.SelectionIndex % 4 == 3)
 				{
 					inventoryController.SelectionIndex -= 3;
+					inventoryController.IsOnBackpack = false;
 				}
 				else
 				{
@@ -54,9 +70,14 @@ public class MenuInputHandler : IInputHandler
 			}
 			case KeyCode.LeftArrow:
 			{
-				if (inventoryController.SelectionIndex % 4 == 0)
+				if (!inventoryController.IsOnBackpack)
+				{
+					inventoryController.IsOnBackpack = true;
+				}
+				else if (inventoryController.SelectionIndex % 4 == 0)
 				{
 					inventoryController.SelectionIndex += 3;
+					inventoryController.IsOnBackpack = false;
 				}
 				else
 				{
@@ -65,6 +86,7 @@ public class MenuInputHandler : IInputHandler
 				break;
 			}
 		}
+		inventoryController.UpdateState();
 	}
 
 	public override void OnKeyReleased(KeyCode key)

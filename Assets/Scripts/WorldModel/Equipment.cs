@@ -15,6 +15,9 @@ public class Equipment
 		outfit = null;
 	}
 
+	public ShopItem Hat { get => hat;}
+	public ShopItem Outfit { get => outfit; }
+
 	/// <summary>
 	/// Equips the player with a new hat. If null, the hat will be dequipped.
 	/// </summary>

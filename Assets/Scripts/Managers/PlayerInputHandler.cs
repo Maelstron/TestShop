@@ -12,12 +12,15 @@ public class PlayerInputHandler : IInputHandler
 	private float speed = 10.0f;
 	public override void OnKeyPressed(KeyCode key)
 	{
-		Debug.Log("OnKeyPressed: " + key);
-		if (key == KeyCode.Z)//TODO add NPC interaction check.
+		if (key == KeyCode.Z && ShopManager.instance.CanInitiateShop())
 		{
 			// Open shop menu.
-			Debug.Log("OpenShopDialog");
 			GameManager.instance.OpenShopDialog();
+		}
+		if (key == KeyCode.X)
+		{
+			// Open inventory menu.
+			GameManager.instance.OpenInventoryDialog();
 		}
 	}
 

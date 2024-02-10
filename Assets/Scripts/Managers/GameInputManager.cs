@@ -63,6 +63,10 @@ public class GameInputManager : MonoBehaviour
         {
             currentInputHandler.OnKeyPressed(KeyCode.LeftArrow);
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void HandleOnKeyUp()

@@ -10,4 +10,9 @@ class Inventory
 {
 	[SerializeField]
 	private List<ShopItem> itemList;
+	[SerializeField]
+	private int money;
+
+	public List<ShopItem> ItemList { get => itemList; set => itemList = value; }
+	public int Money { get => money; set => money = value; }
 }

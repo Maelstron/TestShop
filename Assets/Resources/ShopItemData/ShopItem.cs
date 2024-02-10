@@ -21,6 +21,8 @@ public class ShopItem : ScriptableObject, IEquatable<ShopItem>
 	private int buyPrice;
 	[SerializeField]
 	private int sellPrice;
+	[SerializeField]
+	private bool canEquip;
 
 	public string ItemName { get => itemName; }
 	public string Description { get => description; }
@@ -28,6 +30,7 @@ public class ShopItem : ScriptableObject, IEquatable<ShopItem>
 	public int AvailableQuantity { get => availableQuantity; set => availableQuantity = value; }
 	public int BuyPrice { get => buyPrice; }
 	public int SellPrice { get => sellPrice; }
+	public bool CanEquip { get => canEquip; }
 
 	public bool Equals(ShopItem other)
 	{

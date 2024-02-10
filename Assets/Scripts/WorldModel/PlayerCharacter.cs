@@ -9,7 +9,7 @@ public class PlayerCharacter : MonoBehaviour
     private Equipment equipment;
 
     [SerializeField]
-    private GameObject defaultOutfit;
+    private ShopItem defaultOutfit;
 
     [SerializeField]
     private GameObject hairObject;
@@ -17,26 +17,55 @@ public class PlayerCharacter : MonoBehaviour
     private GameObject outfitObject;
     [SerializeField]
     private GameObject baseBodyObject;
-    //If there is time we implement the hat support.
+
+    //TODO If there is time we implement the hat support.
     //[SerializeField]
-    //private GameObject baseBody;
+    //private GameObject hatObject;
+
+    internal Inventory Inventory { get => inventory; set => inventory = value; }
+	public Equipment Equipment { get => equipment; set => equipment = value; }
+	public ShopItem DefaultOutfit { get => defaultOutfit; }
 
 
-    private void Awake()
+	private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        equipment = new Equipment();
+        equipment.EquipOutfit(defaultOutfit);
+        UpdateOutfit();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         hairObject.SetActive(true);
+        outfitObject.SetActive(true);
+        baseBodyObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public void UpdateOutfit()
+    {
+        outfitObject.SetActive(false);
+        GameObject outfitComponent = this.transform.Find("PlayerOutfit").gameObject;
+        if (Equipment.Outfit.ItemName == "Leather Armor")
+		{
+            outfitObject = outfitComponent.transform.Find("Leather").gameObject;
+        }
+        else if (Equipment.Outfit.ItemName == "Plate Armor")
+        {
+            outfitObject = outfitComponent.transform.Find("Plate").gameObject;
+        }
+        else if (Equipment.Outfit.ItemName == "Male Underwear")
+        {
+            outfitObject = outfitComponent.transform.Find("MaleUnderwear").gameObject;
+        }
+        outfitObject.SetActive(true);
     }
 
     public void UpdateAnimationFromMovement(float horizontalAxis, float verticalaxis)

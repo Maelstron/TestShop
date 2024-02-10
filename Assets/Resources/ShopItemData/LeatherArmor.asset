@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Leather Armor
   description: Simple armor that offers basic protection in combat.
   itemIcon: {fileID: -1198124938, guid: a5975e2c2cc86ef429609e57d0b0d743, type: 3}
-  availableQuantity: 3
+  availableQuantity: 1
   buyPrice: 100
   sellPrice: 25
+  canEquip: 1

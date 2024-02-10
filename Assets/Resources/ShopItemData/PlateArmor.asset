@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Plate Armor
   description: Advanced armor with plates for enhanced protection.
   itemIcon: {fileID: 1066478970, guid: 2416c91993971b04998420015b2c01d1, type: 3}
-  availableQuantity: 2
+  availableQuantity: 1
   buyPrice: 300
   sellPrice: 100
+  canEquip: 1

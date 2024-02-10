@@ -16,6 +16,18 @@ public class ShopInputHandler : IInputHandler
 				shopController.IsOnPlayerSide = !shopController.IsOnPlayerSide;
 				break;
 			}
+			case KeyCode.C:
+			{
+				// Close screen.
+				GameManager.instance.CloseShopDialog();
+				break;
+			}
+			case KeyCode.Z:
+			{
+				// Interact (buy/sell)
+				shopController.BuySellSelectedItem();
+				break;
+			}
 			case KeyCode.DownArrow:
 			{
 				if (shopController.SelectionIndex > 11)
@@ -65,6 +77,8 @@ public class ShopInputHandler : IInputHandler
 				break;
 			}
 		}
+		shopController.UpdateState();
+		shopController.UpdateCursorColor();
 	}
 
 	public override void OnKeyReleased(KeyCode key)

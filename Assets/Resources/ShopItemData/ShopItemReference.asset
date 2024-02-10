@@ -13,63 +13,13 @@ MonoBehaviour:
   m_Name: ShopItemReference
   m_EditorClassIdentifier: 
   itemList:
-  - name: MaleUnderware
-    description: 
-    itemIcon: {fileID: -42761993, guid: 0d0cc4a5ebeaa0f4582c2ae5b7808168, type: 3}
-    availableQuantity: 0
-    buyPrice: 0
-    sellPrice: 0
-  - name: FemaleUnderware
-    description: 
-    itemIcon: {fileID: -1330219388, guid: 81cd03b2998c3a44993cf6c2d9501436, type: 3}
-    availableQuantity: 0
-    buyPrice: 0
-    sellPrice: 0
-  - name: 
-    description: 
-    itemIcon: {fileID: 0}
-    availableQuantity: 0
-    buyPrice: 0
-    sellPrice: 0
-  - name: 
-    description: 
-    itemIcon: {fileID: 0}
-    availableQuantity: 0
-    buyPrice: 0
-    sellPrice: 0
-  - name: 
-    description: 
-    itemIcon: {fileID: 0}
-    availableQuantity: 0
-    buyPrice: 0
-    sellPrice: 0
-  - name: 
-    description: 
-    itemIcon: {fileID: 0}
-    availableQuantity: 0
-    buyPrice: 0
-    sellPrice: 0
-  - name: 
-    description: 
-    itemIcon: {fileID: 0}
-    availableQuantity: 0
-    buyPrice: 0
-    sellPrice: 0
-  - name: 
-    description: 
-    itemIcon: {fileID: 0}
-    availableQuantity: 0
-    buyPrice: 0
-    sellPrice: 0
-  - name: 
-    description: 
-    itemIcon: {fileID: 0}
-    availableQuantity: 0
-    buyPrice: 0
-    sellPrice: 0
-  - name: 
-    description: 
-    itemIcon: {fileID: 0}
-    availableQuantity: 0
-    buyPrice: 0
-    sellPrice: 0
+  - {fileID: 11400000, guid: 532b6308cf0f9574b8d9e6858e4d9996, type: 2}
+  - {fileID: 11400000, guid: 4c928d5ae4bd6c743931e993e5cd9884, type: 2}
+  - {fileID: 11400000, guid: 967500cab8cb1d141be852ff251e8f13, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
