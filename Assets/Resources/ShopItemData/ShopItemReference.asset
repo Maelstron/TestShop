@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b8dcd8f48634e43b19f83de8a660b2, type: 3}
+  m_Name: ShopItemReference
+  m_EditorClassIdentifier: 
+  itemList:
+  - name: MaleUnderware
+    description: 
+    itemIcon: {fileID: -42761993, guid: 0d0cc4a5ebeaa0f4582c2ae5b7808168, type: 3}
+    availableQuantity: 0
+    buyPrice: 0
+    sellPrice: 0
+  - name: FemaleUnderware
+    description: 
+    itemIcon: {fileID: -1330219388, guid: 81cd03b2998c3a44993cf6c2d9501436, type: 3}
+    availableQuantity: 0
+    buyPrice: 0
+    sellPrice: 0
+  - name: 
+    description: 
+    itemIcon: {fileID: 0}
+    availableQuantity: 0
+    buyPrice: 0
+    sellPrice: 0
+  - name: 
+    description: 
+    itemIcon: {fileID: 0}
+    availableQuantity: 0
+    buyPrice: 0
+    sellPrice: 0
+  - name: 
+    description: 
+    itemIcon: {fileID: 0}
+    availableQuantity: 0
+    buyPrice: 0
+    sellPrice: 0
+  - name: 
+    description: 
+    itemIcon: {fileID: 0}
+    availableQuantity: 0
+    buyPrice: 0
+    sellPrice: 0
+  - name: 
+    description: 
+    itemIcon: {fileID: 0}
+    availableQuantity: 0
+    buyPrice: 0
+    sellPrice: 0
+  - name: 
+    description: 
+    itemIcon: {fileID: 0}
+    availableQuantity: 0
+    buyPrice: 0
+    sellPrice: 0
+  - name: 
+    description: 
+    itemIcon: {fileID: 0}
+    availableQuantity: 0
+    buyPrice: 0
+    sellPrice: 0
+  - name: 
+    description: 
+    itemIcon: {fileID: 0}
+    availableQuantity: 0
+    buyPrice: 0
+    sellPrice: 0

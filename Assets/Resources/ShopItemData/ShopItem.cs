@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ShopItem", order = 2)]
 [Serializable]
-public class ShopItem : IEquatable<ShopItem>
+public class ShopItem : ScriptableObject, IEquatable<ShopItem>
 {
 	[SerializeField]
-	private string name;
+	private string itemName;
 	[SerializeField]
 	private string description;
 	[SerializeField]
@@ -21,7 +22,7 @@ public class ShopItem : IEquatable<ShopItem>
 	[SerializeField]
 	private int sellPrice;
 
-	public string Name { get => name; }
+	public string ItemName { get => itemName; }
 	public string Description { get => description; }
 	public Sprite ItemIcon { get => itemIcon; }
 	public int AvailableQuantity { get => availableQuantity; set => availableQuantity = value; }

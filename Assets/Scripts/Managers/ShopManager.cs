@@ -19,9 +19,18 @@ public class ShopManager : MonoBehaviour
     }
 
 
-    public void CanPurchaseItem(ShopItem selectedItem)
+    public bool CanPurchaseItem(ShopItem selectedItem, int quantity)
 	{
-        //if ()
+        PlayerCharacter player = GameManager.instance.Player;
+        if (!player)
+		{
+            return false;
+		}
+		//if (player.)
+		//{
+
+		//}
+        return true;
 	}
 
     public void PurchaseItem(ShopItem selectedItem)
@@ -33,17 +42,17 @@ public class ShopManager : MonoBehaviour
 		}
     }
 
-    public void SellItem(ShopItem selectedItem)
+    public void SellItem(ShopItem selectedItem, int quantity = 1)
     {
         ShopItem listItem = shopItems.Find(item => item.Equals(selectedItem));
         if (listItem == null)
 		{
             shopItems.Add(selectedItem);
-            selectedItem.AvailableQuantity = 1;
+            selectedItem.AvailableQuantity = quantity;
 		}
 		else
 		{
-            selectedItem.AvailableQuantity++;
+            selectedItem.AvailableQuantity += quantity;
         }
     }
 }
