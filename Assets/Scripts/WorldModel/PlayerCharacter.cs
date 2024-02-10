@@ -41,7 +41,6 @@ public class PlayerCharacter : MonoBehaviour
 
     public void UpdateAnimationFromMovement(float horizontalAxis, float verticalaxis)
 	{
-        Debug.Log("Movement X: " + horizontalAxis + ", Y: " + verticalaxis);
         bool isHorizontalSpeedAbsBigger = Mathf.Abs(horizontalAxis) > Mathf.Abs(verticalaxis);
         // Animate hair.
         Animator hairAnimator = hairObject.GetComponent<Animator>();

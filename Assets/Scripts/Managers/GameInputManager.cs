@@ -28,6 +28,6 @@ public class GameInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CurrentInputHandler.UpdateDirectionalInput(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        CurrentInputHandler.UpdateDirectionalInput(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 }
