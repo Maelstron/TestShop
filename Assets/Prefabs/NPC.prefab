@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8780866834870008806
 Transform:
   m_ObjectHideFlags: 0
@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 2384972161891608088}
   - component: {fileID: 5941000686572525024}
   - component: {fileID: 5941000686572525025}
-  - component: {fileID: 5941000686572525027}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -200,21 +199,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.67, y: 0.75}
   m_EdgeRadius: 0
---- !u!114 &5941000686572525027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2384972161891608095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac1ee8b3126e2047950f95d69346199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCharacter: {fileID: 2384972161891608088}
-  rigidBody: {fileID: 5941000686572525024}
-  speed: 5
 --- !u!1 &2384972162095276098
 GameObject:
   m_ObjectHideFlags: 0

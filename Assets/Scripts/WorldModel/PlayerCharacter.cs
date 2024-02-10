@@ -24,7 +24,7 @@ public class PlayerCharacter : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Start is called before the first frame update

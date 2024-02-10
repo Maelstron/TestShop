@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private PlayerCharacter player;
     private ShopItemReference itemDb;
+    [SerializeField]
+    private GameObject shopUI;
 
     public static GameManager instance = null;
 
@@ -33,5 +35,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OpenShopDialog()
+	{
+        shopUI.SetActive(true);
+        GameInputManager.instance.CurrentInputHandler = shopUI.GetComponent<ShopInputHandler>();
     }
 }

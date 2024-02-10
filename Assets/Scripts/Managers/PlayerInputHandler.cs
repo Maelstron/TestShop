@@ -12,12 +12,17 @@ public class PlayerInputHandler : IInputHandler
 	private float speed = 10.0f;
 	public override void OnKeyPressed(KeyCode key)
 	{
-		throw new System.NotImplementedException();
+		Debug.Log("OnKeyPressed: " + key);
+		if (key == KeyCode.Z)//TODO add NPC interaction check.
+		{
+			// Open shop menu.
+			Debug.Log("OpenShopDialog");
+			GameManager.instance.OpenShopDialog();
+		}
 	}
 
 	public override void OnKeyReleased(KeyCode key)
 	{
-		throw new System.NotImplementedException();
 	}
 
 	public override void UpdateDirectionalInput(float horizontalAxis, float verticalaxis)

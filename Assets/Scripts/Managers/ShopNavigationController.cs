@@ -12,8 +12,8 @@ public class ShopNavigationController : MonoBehaviour
     [SerializeField]
     private Image selectionCursor;
 
-    private int selectionIndex;
-    private bool isOnPlayerSide;
+    private int selectionIndex = 0;
+    private bool isOnPlayerSide = true;
 
 	public int SelectionIndex { get => selectionIndex; set => selectionIndex = value; }
 	public bool IsOnPlayerSide { get => isOnPlayerSide; set => isOnPlayerSide = value; }
@@ -27,6 +27,13 @@ public class ShopNavigationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isOnPlayerSide)
+		{
+            selectionCursor.transform.position = playerInventoryDisplay[selectionIndex].transform.position;
+        }
+        else
+        {
+            selectionCursor.transform.position = shopInventoryDisplay[selectionIndex].transform.position;
+        }
     }
 }
